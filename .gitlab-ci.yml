@@ -21,7 +21,7 @@ stages:          # List of stages for jobs, and their order of execution
 
 build-test-job:       # Este trabajo construye y corre tests pues Maven lo hace junto
   stage: buildtest
-  image: eclipse-temurin:17-jdk
+  image: maven:3.8-eclipse-temurin-17
   script:
     - echo "Construyendo y probando"
     - mvn package
